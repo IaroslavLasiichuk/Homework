@@ -262,3 +262,4 @@ select1.value = select;
 }
 
 document.querySelector('.s-201').onchange = f20;
+// Completed
