@@ -251,16 +251,14 @@ document.querySelector('.b-19').onclick = f19;
 // У вас есть два select. Напишите код, который при изменении select .s-201 будет аналогично изменять выбранный option в .s-202.
 
 function f20() {
-  const select = document.querySelector('.s-201').value;
-  document.querySelector('.s-202').value = select;
+  if (this.classList.value === 's-201') {
+    document.querySelector('.s-202').value = this.value
+  } else {
+    document.querySelector('.s-201').value = this.value
+  }
 }
 
-function f21() {
-  const select1 = document.querySelector('.s-202').value;
-  document.querySelector('.s-201').value = select1;
-}
-
-document.querySelector('.s-202').onchange = f21;
+document.querySelector('.s-202').onchange = f20;
 document.querySelector('.s-201').onchange = f20;
 
 
